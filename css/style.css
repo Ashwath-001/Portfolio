@@ -1214,8 +1214,8 @@ ol {
   filter: blur(0);
 }
 .about__pic__item.about__pic__item--large {
-  height: 540px;
-  width: 472px;
+  height: 480px;
+  width: 400px;
 }
 
 .about__text {
