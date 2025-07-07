@@ -1207,9 +1207,15 @@ ol {
   height: 235px;
   margin-right: -10px;
   margin-bottom: 20px;
+  filter: blur(0.5px);
+  transition: filter 0.3s;
+}
+.about__pic__item:hover {
+  filter: blur(0);
 }
 .about__pic__item.about__pic__item--large {
-  height: 490px;
+  height: 540px;
+  width: 472px;
 }
 
 .about__text {

@@ -247,3 +247,43 @@
 
 })(jQuery);
 
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const formStatus = document.getElementById('form-status');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Create JSON object from form data
+            const formData = new FormData(form);
+            const jsonData = {};
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
+            
+            fetch('https://formspree.io/f/mrbkweqw', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response was not ok');
+            })
+            .then(data => {
+                formStatus.innerHTML = '<p style="color: #00bfe7;">Message sent successfully!</p>';
+                form.reset();
+            })
+            .catch(error => {
+                formStatus.innerHTML = '<p style="color: #ff6b6b;">Something went wrong. Please try again.</p>';
+                console.error('Error:', error);
+            });
+        });
+    }
+});
