@@ -1,0 +1,87 @@
+/*
+    SlickNav Responsive Mobile Menu v1.0.10
+    (c) 2016 Josh Cope
+    licensed under MIT
+*/
+
+/* Fresh SlickNav CSS */
+.slicknav_menu {
+    display:none;
+    position: absolute; /* Position absolutely relative to the header */
+    top: 85px; /* Adjust this value to position the menu below your header */
+    right: 0;
+    width: 100%;
+    background: #2c3e50; /* A dark background for the dropdown */
+    z-index: 99999; /* Ensure it's on top of everything */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.slicknav_btn {
+    display: block;
+    float: right;
+    background: #3498db; /* A bright blue for the button */
+    padding: 10px;
+    margin: 20px 15px; /* Give it some space */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slicknav_icon-bar {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+/* Animation for the hamburger icon to turn into an X */
+.slicknav_open .slicknav_icon-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.slicknav_open .slicknav_icon-bar:nth-child(2) {
+    opacity: 0;
+}
+.slick_open .slicknav_icon-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.slicknav_nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slicknav_nav li {
+    border-bottom: 1px solid #34495e; /* Separator lines */
+}
+
+.slicknav_nav li:last-child {
+    border-bottom: none;
+}
+
+.slicknav_nav a {
+    display: block;
+    padding: 15px 20px;
+    color: #ecf0f1; /* Light text color */
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.slicknav_nav a:hover {
+    background: #3498db; /* Highlight on hover */
+}
+
+.slicknav_menutxt {
+    display: none; /* Hide the word "MENU" */
+}
+
+/* This is the most important part */
+@media screen and (max-width: 991px) {
+    .header__nav__menu {
+        display: none !important; /* Force hide the original desktop menu */
+    }
+    .slicknav_menu {
+        display: block !important; /* Force show the mobile menu */
+    }
+}
