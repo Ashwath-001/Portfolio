@@ -1,33 +1,20 @@
-/*  ---------------------------------------------------
-    Template Name: Dreams
-    Description: Dreams wedding template
-    Author: Colorib
-    Author URI: https://colorlib.com/
-    Version: 1.0
-    Created: Colorib
----------------------------------------------------------  */
-
 'use strict';
 
 (function ($) {
 
-       // Mobile Menu Toggle - Fixed Version
     document.addEventListener('DOMContentLoaded', function() {
         const navToggle = document.getElementById('navToggle');
         const mainNav = document.getElementById('mainNav');
         
         if(navToggle && mainNav) {
-            // Add click event directly
             navToggle.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent default behavior
-                console.log('Toggle clicked'); // For debugging
+                e.preventDefault(); 
+                console.log('Toggle clicked'); 
                 
-                // Toggle active classes
                 navToggle.classList.toggle('active');
                 mainNav.classList.toggle('active');
             });
             
-            // Close menu when clicking on a nav link
             const navLinks = mainNav.querySelectorAll('a');
             navLinks.forEach(link => {
                 link.addEventListener('click', function() {
@@ -36,7 +23,7 @@
                 });
             });
         } else {
-            console.error('Navigation elements not found'); // For debugging
+            console.error('Navigation elements not found');
         }
     });
 
@@ -125,7 +112,6 @@
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
-    //Masonary
     $('.work__gallery').masonry({
         itemSelector: '.work__item',
         columnWidth: '.grid-sizer',
@@ -235,16 +221,6 @@
         }
     });
 
-    /*------------------
-        Video Popup
-    --------------------*/
-    $('.video-popup').magnificPopup({
-        type: 'iframe'
-    });
-
-
- 
-
 })(jQuery);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -255,7 +231,6 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Create JSON object from form data
             const formData = new FormData(form);
             const jsonData = {};
             formData.forEach((value, key) => {
