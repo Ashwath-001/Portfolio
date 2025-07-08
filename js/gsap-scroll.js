@@ -53,18 +53,6 @@ gsap.matchMedia().add("(max-width: 767px)", () => {
         ease: "power3.out"
     });
 
-    gsap.from(".hero__text h2", {
-        scrollTrigger: {
-            trigger: ".hero__text h2",
-            start: "top 90%",
-            toggleActions: "play reverse play reverse"
-        },
-        duration: 1.2,
-        y: 40,
-        opacity: 0,
-        delay: 0.5,
-        ease: "power3.out"
-    });
 
     gsap.from(".hero__text a", {
         scrollTrigger: {
@@ -96,19 +84,7 @@ gsap.matchMedia().add("(min-width: 768px)", () => {
         ease: "power3.out"
     });
 
-    gsap.from(".hero__text h2", {
-        scrollTrigger: {
-            trigger: ".hero__text h2",
-            start: "top 80%",
-            toggleActions: "play reverse play reverse"
-        },
-        duration: 1.2,
-        y: 60,
-        scale: 0.8,
-        opacity: 0,
-        delay: 0.5,
-        ease: "elastic.out(0.5, 0.4)"
-    });
+   
 
     gsap.from(".hero__text a", {
         scrollTrigger: {
@@ -129,9 +105,8 @@ gsap.matchMedia().add("(min-width: 768px)", () => {
 
 gsap.from(".about__item", {
     scrollTrigger: {
-        trigger: ".about",
-        start: "top 90%",
-        end: "bottom 10%",
+        trigger: ".about__item",
+        start: "top 70%",
         toggleActions: "play reverse play reverse"
     },
     duration: 1,
@@ -155,18 +130,7 @@ gsap.from(".about", {
 });
 
 // Services section
-gsap.from(".services__title", {
-    scrollTrigger: {
-        trigger: ".services",
-        start: "top 70%",
-        toggleActions: "play reverse play reverse"
-    },
-    duration: 1,
-    x: -70,
-    rotationZ: -10,
-    opacity: 0,
-    ease: "power2.out"
-});
+
 
 gsap.from(".services__item", {
     scrollTrigger: {
@@ -184,54 +148,8 @@ gsap.from(".services__item", {
 });
 
 
-// Team section animations with rotation and scale
-gsap.from(".team__item", {
-    scrollTrigger: {
-        trigger: ".team",
-        start: "top 70%",
-        toggleActions: "play reverse play reverse"
-    },
-    duration: 1,
-    y: 70,
-    rotationY: 15,
-    scale: 0.9,
-    opacity: 0,
-    stagger: 0.3,
-    ease: "power3.out"
-});
-
-// Call to action animation with scale and rotation
-gsap.from(".callto__text", {
-    scrollTrigger: {
-        trigger: ".callto",
-        start: "top 70%",
-        toggleActions: "play reverse play reverse"
-    },
-    duration: 1.2,
-    y: 60,
-    scale: 0.9,
-    rotationZ: 5,
-    opacity: 0,
-    ease: "power3.out"
-});
-
-// Footer animations with stagger and scale
-gsap.from(".footer__option__item", {
-    scrollTrigger: {
-        trigger: ".footer",
-        start: "top 80%",
-        toggleActions: "play reverse play reverse"
-    },
-    duration: 1,
-    y: 40,
-    scale: 0.9,
-    opacity: 0,
-    stagger: 0.3,
-    ease: "power3.out"
-});
-
 // Hover animations for buttons
-const buttons = document.querySelectorAll(".primary-btn, .callto__text a");
+const buttons = document.querySelectorAll(".primary-btn");
 buttons.forEach(button => {
     button.addEventListener("mouseenter", () => {
         gsap.to(button, {
