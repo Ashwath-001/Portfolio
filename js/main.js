@@ -40,13 +40,13 @@
             Team Member Cards
         --------------------*/
         const teamMembers = [
-            { name: "Goushal K", title: "CTF Player", handle: "Jelly Bean",  avatarUrl: "img/team/goushal.jpg", website: "https://github.com/goushalk" },
-            { name: "Harish K P", title: "CTF Player", handle: "H4R15H",  avatarUrl: "img/team/harish.jpg", website: "https://github.com/goushalk" },
-            { name: "Elavarasan T", title: "CTF player", handle: "Pharoah", avatarUrl: "img/team/jaswanth.jpg", website: "https://www.pharoah.in.net" },
-            { name: "Arjun B", title: "CTF player", handle: "Bluekyyyy", avatarUrl: "img/team/arjun.jpg", website: "https://bluekyyyy.github.io" },
-            { name: "Nithila Rajeshkumar", title: "CTF player", handle: "Luna",  avatarUrl: "img/team/nithila.jpg", website: "https://github.com/" },
-            { name: "Lakshitha", title: "Develeoper", handle: "Laki", avatarUrl: "img/team/lakshitha.jpg", website: "https://github.com/goushalk" },
-            { name: "Padmesh", title: "Full Stack", handle: "Padmesh", avatarUrl: "img/team/padmesh.jpg", website: "https://github.com/goushalk" },
+            { name: "Goushal K", title: "?!?!?!", handle: "JellyBean",  avatarUrl: "img/team/goushal.jpg", website: "https://github.com/goushalk" },
+            { name: "Harish K P", title: "Manifesting Android Pentesting, IoT Pentesting", handle: "H4R15H",  avatarUrl: "img/team/harish.jpg", website: "https://github.com/goushalk" },
+            { name: "Elavarasan T", title: "Reverse Engineer", handle: "HexPh4r40h", avatarUrl: "https://pharoah.in.net/assests/images/favicon.png", website: "https://www.pharoah.in.net" },
+            { name: "Arjun B", title: "Web, OSINT, Stegnography ", handle: "BLU3KY", avatarUrl: "img/team/arjun.jpg", website: "https://bluekyyyy.github.io" },
+            { name: "Nithila Rajeshkumar", title: "Web Exploitation, Stegnography", handle: "LUNA",  avatarUrl: "img/team/nithila.jpg", website: "https://github.com/" },
+            { name: "Lakshitha", title: "Forensics & Crypto", handle: "L4K1", avatarUrl: "img/team/lakshitha.jpg", website: "https://github.com/goushalk" },
+            { name: "Padmesh", title: "Full Stack Developer", handle: "DuDu", avatarUrl: "img/team/padmesh.jpg", website: "https://github.com/goushalk" },
         ];
 
         function createProfileCard(member) {
